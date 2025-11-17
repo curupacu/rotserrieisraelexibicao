@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análise Técnica — Rotisserie Israel</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* ESTILOS EXTRAS PARA AS ABAS (TABS) */
+    .tabs {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      background: #f0efe9;
+      color: #233123;
+      border: 1px solid #d9ddcf;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .tab-btn.active {
+      background: #1D5131;
+      color: white;
+      border-color: #1D5131;
+    }
+    .tab-content {
+      display: none;
+      animation: fade 0.3s ease-in-out;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    iframe {
+      border-radius: 14px;
+      width: 100%;
+      height: 600px;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .image-frame {
+      background: #f3f1ea;
+      border-radius: 16px;
+      border: 1px dashed rgba(0,0,0,0.15);
+      padding: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      margin-bottom: 0.8rem;
+    }
+  </style>
+
+  <script>
+    function openTab(tabName) {
+      document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+      document.querySelectorAll(".tab-content").forEach(tab => tab.classList.remove("active"));
+
+      document.querySelector(`#btn-${tabName}`).classList.add("active");
+      document.querySelector(`#tab-${tabName}`).classList.add("active");
+    }
+  </script>
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="topbar topbar-technical">
+    <div class="container topbar-inner">
+      <div class="topbar-logo-area">
+        <img src="assets/img/logo-rotisserie.png" class="topbar-logo">
+        <span class="topbar-title">Análise Técnica</span>
+      </div>
+      <nav class="topbar-nav">
+        <a onclick="openTab('docs')">Documentos</a>
+        <a onclick="openTab('diagramas')">Diagramas</a>
+        <a onclick="openTab('mivrotisserie')">MIV Rotisserie</a>
+        <a onclick="openTab('mivempresa')">MIV Empresa</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero hero-technical">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="hero-tag">Documentação Completa</span>
+        <h1>Rotisserie Israel — Área de Análise Técnica</h1>
+        <p>
+          Abaixo você encontra toda a documentação do sistema, incluindo PDFs, diagramas e os dois manuais de identidade visual.
+        </p>
+        <a href="index.html" class="btn btn-ghost">← Voltar</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container" style="margin-top:3rem;">
+
+    <!-- TABS -->
+    <div class="tabs">
+      <button id="btn-docs" class="tab-btn active" onclick="openTab('docs')">📄 Documentos</button>
+      <button id="btn-diagramas" class="tab-btn" onclick="openTab('diagramas')">🖼 Diagramas</button>
+      <button id="btn-mivrotisserie" class="tab-btn" onclick="openTab('mivrotisserie')">🎨 MIV Rotisserie</button>
+      <button id="btn-mivempresa" class="tab-btn" onclick="openTab('mivempresa')">🏢 MIV Empresa</button>
+    </div>
+
+    <!-- TAB 1: DOCUMENTOS (PDFs) -->
+    <div id="tab-docs" class="tab-content active">
+      <h2>Documentos Técnicos</h2>
+      <p>Aqui estão os PDFs oficiais do projeto:</p>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>Requisitos</h3>
+          <a href="assets/docs/requisitos.pdf" target="_blank" class="btn btn-primary">Visualizar</a>
+          <a href="assets/docs/requisitos.pdf" download class="btn btn-outline">Baixar PDF</a>
+        </article>
+
+        <article class="card">
+          <h3>Documentação Geral</h3>
+          <a href="assets/docs/documentacao.pdf" target="_blank" class="btn btn-primary">Visualizar</a>
+          <a href="assets/docs/documentacao.pdf" download class="btn btn-outline">Baixar PDF</a>
+        </article>
+      </div>
+    </div>
+
+    <!-- TAB 2: DIAGRAMAS -->
+    <div id="tab-diagramas" class="tab-content">
+      <h2>Diagramas do Sistema</h2>
+      <p>Aqui estão os principais diagramas utilizados no desenvolvimento.</p>
+
+      <div class="grid-2">
+
+        <figure class="screenshot-card">
+          <div class="image-frame">
+            <img src="assets/img/diagramadeclasse.jfif" alt="Diagrama de Classe">
+          </div>
+          <figcaption>Diagrama de Classe (.jfif)</figcaption>
+        </figure>
+
+        <figure class="screenshot-card">
+          <div class="image-frame">
+            <img src="assets/img/uml.webp" alt="UML do Sistema">
+          </div>
+          <figcaption>UML do Sistema (.webp)</figcaption>
+        </figure>
+
+        <figure class="screenshot-card">
+          <div class="image-frame">
+            <img src="assets/img/mer.webp" alt="MER">
+          </div>
+          <figcaption>Modelo Entidade Relacionamento (.webp)</figcaption>
+        </figure>
+
+      </div>
+    </div>
+
+    <!-- TAB 3: MIV ROTISSERIE -->
+    <div id="tab-mivrotisserie" class="tab-content">
+      <h2>Manual de Identidade Visual — Rotisserie Israel</h2>
+      <p>Visualize abaixo o manual completo em PDF:</p>
+
+      <iframe src="assets/docs/manual-rotisserie.pdf"></iframe>
+
+      <a href="assets/docs/manual-rotisserie.pdf" download class="btn btn-primary" style="margin-top:1rem;">
+        Baixar MIV Rotisserie
+      </a>
+    </div>
+
+    <!-- TAB 4: MIV EMPRESA (NovaTec) -->
+    <div id="tab-mivempresa" class="tab-content">
+      <h2>Manual de Identidade Visual — Empresa NovaTec</h2>
+      <p>Manual institucional da empresa responsável pelo desenvolvimento.</p>
+
+      <iframe src="assets/docs/manual-novatec.pdf"></iframe>
+
+      <a href="assets/docs/manual-novatec.pdf" download class="btn btn-primary" style="margin-top:1rem;">
+        Baixar MIV NovaTec
+      </a>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner container">
+      <p>Rotisserie Israel — Documentação Técnica</p>
+    </div>
+  </footer>
+
+</body>
+</html>
