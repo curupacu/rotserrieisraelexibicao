@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotisserie Israel — Apresentação</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    :root {
+      --primary: #1D5131;
+      --beige: #F7F5EF;
+    }
+
+    body {
+      background: var(--beige);
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* HEADER FIXO COM LOGO NO CANTO */
+    .header {
+      width: 100%;
+      background: var(--primary);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .header img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+    }
+
+    .header-title {
+      color: white;
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    /* HERO MAIS COMPACTA */
+    .hero {
+      text-align: center;
+      padding: 3.2rem 1rem 2.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: .3rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #444;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    /* BOTÃO */
+    .btn-main {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 1rem 1.8rem;
+      background: #f4a340;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      color: black;
+      font-size: 1.05rem;
+    }
+
+    /* MOCKUPS */
+    .prints-section {
+      text-align: center;
+      padding: 2.5rem 1rem;
+    }
+
+    .prints-section h2 {
+      color: var(--primary);
+      font-size: 1.7rem;
+      margin-bottom: 2rem;
+    }
+
+    .mockup {
+      width: 330px;
+      margin: 1.3rem auto;
+      background: #000;
+      padding: 12px;
+      border-radius: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .mockup img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    /* FEATURES */
+    .features {
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .features h2 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 1.8rem;
+      font-size: 1.7rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 18px;
+      margin-bottom: 1rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+
+    .feature-item img {
+      width: 42px;
+      height: 42px;
+    }
+
+    /* SOBRE O PROJETO */
+    .about {
+      padding: 3rem 1rem 4rem;
+      background: #faf9f3;
+      text-align: center;
+    }
+
+    .about h2 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      max-width: 520px;
+      margin: 0.8rem auto;
+      line-height: 1.5rem;
+      color: #555;
+      font-size: 1.05rem;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--primary);
+      color: white;
+    }
+
+    .accessibility {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  text-align: center;
+}
+
+.accessibility h2 {
+  color: var(--primary);
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.accessibility p {
+  max-width: 520px;
+  margin: 0 auto 1.6rem;
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.5rem;
+}
+
+.accessibility-list {
+  display: grid;
+  gap: .9rem;
+  margin-top: 1rem;
+}
+
+.acc-item {
+  background: white;
+  padding: .9rem 1rem;
+  border-radius: 14px;
+  font-size: .95rem;
+  color: #2e492f;
+  box-shadow: 0 6px 14px rgba(0,0,0,.05);
+  border-left: 6px solid var(--primary);
+  text-align: left;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <img src="assets/img/logo-rotisserie.png" alt="Logo">
+    <span class="header-title">Rotisserie Israel</span>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Sistema de Pedidos Digital</h1>
+    <p>Comida caseira, moderna e organizada — agora com tecnologia criada para facilitar o atendimento.</p>
+    
+  </section>
+
+  <!-- PRINTS -->
+  <section id="prints" class="prints-section">
+    <h2>O sistema por dentro</h2>
+
+    <div class="mockup">
+      <img src="assets/img/print01.jpeg">
+    </div>
+
+    <div class="mockup">
+      <img src="assets/img/print02.jpeg">
+    </div>
+
+    <div class="mockup">
+      <img src="assets/img/print03.jpeg">
+    </div>
+
+    <div class="mockup">
+      <img src="assets/img/print04.jpeg">
+    </div>
+
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <h2>O que o sistema oferece</h2>
+
+    <div class="feature-item">
+      <img src="assets/img/icon1.jpeg">
+      <p>Cardápio organizado e visual moderno</p>
+    </div>
+
+    <div class="feature-item">
+      <img src="assets/img/icon2.jpeg">
+      <p>Carrinho simples e rápido</p>
+    </div>
+
+    <div class="feature-item">
+      <img src="assets/img/icon3.jpeg">
+      <p>Adaptado para celular e tablets</p>
+    </div>
+
+    <div class="feature-item">
+      <img src="assets/img/icon4.jpeg">
+      <p>Pedidos salvos automaticamente no sistema</p>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about">
+    <h2>Fábrica de Software — Nosso Projeto</h2>
+    <p>Este sistema foi desenvolvido como um projeto de conclusão do 2º ano da ETEC Heliópolis.</p>
+    <p>A equipe entrevistou a Rotisserie Israel e identificou problemas com papel, cardápio e pedidos.</p>
+    <p>A partir disso, criamos um sistema completo em PHP + MySQL e uma ferramenta de estoque em Python.</p>
+  </section>
+  <!-- ACESSIBILIDADE -->
+<section class="accessibility">
+  <h2>Acessibilidade Inclusiva</h2>
+  <p>
+    O sistema foi desenvolvido pensando em todos os públicos.  
+    Para isso, inclui recursos de acessibilidade como aumento e redução de fonte,
+    dark mode, alto contraste, remoção de animações e leitura de itens.
+  </p>
+
+  <div class="accessibility-list">
+    <div class="acc-item">Aumentar / diminuir tamanho da fonte</div>
+    <div class="acc-item">Modo escuro (Dark Mode)</div>
+    <div class="acc-item">Modo alto contraste</div>
+    <div class="acc-item">Desativar animações</div>
+    <div class="acc-item">Leitura dos itens (TTS)</div>
+  </div>
+</section>
+
+
+  <footer>
+    Rotisserie Israel — Apresentação do Sistema
+  </footer>
+
+</body>
+</html>
